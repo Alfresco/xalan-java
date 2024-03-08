@@ -179,12 +179,13 @@ public final class TemplatesImpl implements Templates, Serializable {
     private void  readObject(ObjectInputStream is) 
       throws IOException, ClassNotFoundException 
     {
-	is.defaultReadObject();
-        if (is.readBoolean()) {
-            _uriResolver = (URIResolver) is.readObject();
-        }
-
-	_tfactory = new TransformerFactoryImpl();
+		throw new RuntimeException("Disabled due to security reasons");
+//		is.defaultReadObject();
+//			if (is.readBoolean()) {
+//				_uriResolver = (URIResolver) is.readObject();
+//			}
+//
+//		_tfactory = new TransformerFactoryImpl();
     } 
 
 
